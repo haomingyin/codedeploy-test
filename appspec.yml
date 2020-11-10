@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/codedeploy-tset
+    destination: /var/www/html/codedeploy-test
 hooks:
   AfterInstall:
     - location: scripts/restart_nginx.sh
