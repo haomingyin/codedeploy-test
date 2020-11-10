@@ -4,6 +4,10 @@ files:
   - source: /
     destination: /var/www/html/codedeploy-test
 hooks:
+  BeforeInstall:
+    - location: scripts/remove_index.sh
+      timeout: 300
+      runas: root
   AfterInstall:
     - location: scripts/restart_nginx.sh
       timeout: 300
